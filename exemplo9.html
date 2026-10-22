@@ -1,37 +1,89 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Exemplo 9</title>
-        <link rel="stylesheet" href="exemplo9.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exemplo 9 - Tabuada Interativa</title>
+
+    <link rel="stylesheet" href="exemplo9.css">
+</head>
+
 <body>
     <div class="container">
+
         <header class="cabecalho">
             <h1>Aprenda</h1>
-            <p>Desenvonvimento de aplicações com html, js, e css.</p>
+            <p>Desenvolvimento de aplicações com HTML, JS e CSS.</p>
         </header>
+
         <main class="conteudo">
+
             <section class="painel">
                 <h2>Seleção de itens</h2>
+
                 <label for="numero">Informe um número:</label>
-                <input type="number" id="numero" value="" min="1" max="100">
+
+                <input
+                    type="number"
+                    id="numero"
+                    min="1"
+                    max="100"
+                    step="1"
+                    placeholder="Digite um número"
+                >
+
                 <div class="botoes">
-                    <button class="btn_somar" onclick="mostrarOperacao('somar')">Somar</button>
-                    <button class="btn_subtrair" onclick="mostrarOperacao('subtrair')">Subtrair</button>
-                    <button class="btn_multiplicar" onclick="mostrarOperacao('multiplicar')">Multiplicar</button>
-                    <button class="btn_dividir" onclick="mostrarOperacao('dividir')">Dividir</button>
-                    <button class="btn_todos" onclick="mostrarOperacao('todos')">Todos</button>
+                    <button type="button" class="btn_somar"
+                        onclick="mostrarOperacao('somar')">
+                        Somar
+                    </button>
 
-                    
+                    <button type="button" class="btn_subtrair"
+                        onclick="mostrarOperacao('subtrair')">
+                        Subtrair
+                    </button>
+
+                    <button type="button" class="btn_multiplicar"
+                        onclick="mostrarOperacao('multiplicar')">
+                        Multiplicar
+                    </button>
+
+                    <button type="button" class="btn_dividir"
+                        onclick="mostrarOperacao('dividir')">
+                        Dividir
+                    </button>
+
+                    <button type="button" class="btn_todos"
+                        onclick="mostrarOperacao('todos')">
+                        Todos
+                    </button>
                 </div>
-                <p id="mensagem" class="mensagem"></p>
-            </section>
-        
-    </main>
-    </div>
-<script src="exemplo9.js"></script>
-</body>
 
+                <p id="mensagem" class="mensagem"
+                    role="status" aria-live="polite"></p>
+            </section>
+
+            <section class="resultado">
+                <h2>Resultado</h2>
+
+                <div id="resultado" class="lista-resultados"></div>
+
+                <div class="boas_vindas">
+                    <h2>Boas-vindas!</h2>
+                    <p>Escolha um número e uma operação.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="rodape">
+            <p>Tabuada interativa 2026.</p>
+        </footer>
+
+    </div>
+
+    <script src="exemplo9.js"></script>
+</body>
 </html>

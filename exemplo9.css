@@ -1,4 +1,5 @@
 
+/* Configurações gerais */
 * {
     margin: 0;
     padding: 0;
@@ -14,77 +15,242 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 20px 0;
 }
 
+/* Container principal */
 .container {
-    background-color: #a1a1a1c5;
+    background-color: #e0e0e0;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
 
+    padding: 20px;
     width: 80%;
     max-width: 1000px;
-    min-height: 98vh;
+    min-height: 95vh;
     margin: 0 auto;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
 }
 
+/* Cabeçalho */
 .cabecalho {
     padding: 20px;
-    background-color: #d67878e3;
+    background-color: #d67878;
     border-radius: 10px;
     text-align: center;
-
     width: 100%;
 }
 
 .cabecalho h1 {
     font-size: 2rem;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(251, 251, 252, 0.3);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .cabecalho p {
-    font-size: 0.8rem;
-    opacity: 0.8;
+    font-size: 0.9rem;
+    color: #fff;
+    opacity: 0.95;
 }
 
-.content {
+/* Conteúdo principal */
+.conteudo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 20px;
-
     width: 100%;
 }
 
+/* Painel de operações */
 .painel {
     padding: 20px;
-    background-color: #d67878e3;
+    background-color: #d67878;
     border-radius: 10px;
     text-align: center;
-
     width: 100%;
 }
 
-/* Ajuste para celulares */
+.painel h2,
+.resultado h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.painel label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Campo numérico */
+#numero {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botoes button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.botoes button:hover {
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+}
+
+.botoes button:focus-visible {
+    outline: 3px solid #333;
+    outline-offset: 3px;
+}
+
+.btn_somar {
+    background-color: #287a43;
+}
+
+.btn_subtrair {
+    background-color: #b33a3a;
+}
+
+.btn_multiplicar {
+    background-color: #2865a8;
+}
+
+.btn_dividir {
+    background-color: #8052a0;
+}
+
+.btn_todos {
+    background-color: #444;
+}
+
+/* Mensagens */
+.mensagem {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Área de resultados */
+.resultado {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 150px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.resultado h2 {
+    color: #333;
+    text-align: center;
+}
+
+.lista-resultados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+/* Boas-vindas */
+.boas_vindas {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f5e3e3;
+    border-radius: 8px;
+}
+
+.boas_vindas h2 {
+    color: #a34444;
+    margin-bottom: 8px;
+}
+
+.boas_vindas p {
+    font-size: 1rem;
+}
+
+/* Rodapé */
+.rodape {
+    margin-top: auto;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    color: #555;
+}
+
+/* Ajustes para celulares */
 @media (max-width: 600px) {
+    body {
+        padding: 10px 0;
+    }
+
     .container {
         width: 95%;
+        min-height: 95vh;
         padding: 12px;
     }
 
     .cabecalho,
-    .painel {
+    .painel,
+    .resultado {
         padding: 15px;
     }
 
     .cabecalho h1 {
         font-size: 1.5rem;
+    }
+
+    .cabecalho p {
+        font-size: 0.8rem;
+    }
+
+    .painel h2,
+    .resultado h2 {
+        font-size: 1.25rem;
+    }
+
+    .botoes button {
+        flex: 1 1 40%;
+        min-width: 100px;
+    }
+
+    #numero {
+        max-width: 100%;
+    }
+
+    .lista-resultados {
+        grid-template-columns: 1fr;
     }
 }
