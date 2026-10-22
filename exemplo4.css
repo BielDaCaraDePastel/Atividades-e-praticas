@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    height: 30vh;
+    background-color: #a3cfec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

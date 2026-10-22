@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exemplo 5</title>
+
+    <link rel="stylesheet" href="exemplo5.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div class="topo">
+            <h1>Meu Dashboard</h1>
+        </div>
+
+
+        <div class="quadro quadro1">
+            <h2>Quadro 1</h2>
+
+            <div class="botoes">
+                <button onclick="mudarCor(this, 'blue')">Azul</button>
+                <button onclick="mudarCor(this, 'red')">Vermelho</button>
+                <button onclick="mudarCor(this, 'green')">Verde</button>
+                <button onclick="mudarCor(this, 'yellow')">Amarelo</button>
+            </div>
+        </div>
+
+ 
+        <div class="quadro quadro2">
+            <h2>Quadro 2</h2>
+
+            <div class="botoes">
+                <button onclick="mudarCor(this, 'blue')">Azul</button>
+                <button onclick="mudarCor(this, 'red')">Vermelho</button>
+                <button onclick="mudarCor(this, 'green')">Verde</button>
+                <button onclick="mudarCor(this, 'yellow')">Amarelo</button>
+            </div>
+        </div>
+
+
+        <div class="quadro quadro3">
+            <h2>Quadro 3</h2>
+
+            <div class="botoes">
+                <button onclick="mudarCor(this, 'blue')">Azul</button>
+                <button onclick="mudarCor(this, 'red')">Vermelho</button>
+                <button onclick="mudarCor(this, 'green')">Verde</button>
+                <button onclick="mudarCor(this, 'yellow')">Amarelo</button>
+            </div>
+        </div>
+
+   
+        <div class="quadro quadro4">
+            <h2>Quadro 4</h2>
+
+            <div class="botoes">
+                <button onclick="mudarCor(this, 'blue')">Azul</button>
+                <button onclick="mudarCor(this, 'red')">Vermelho</button>
+                <button onclick="mudarCor(this, 'green')">Verde</button>
+                <button onclick="mudarCor(this, 'yellow')">Amarelo</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function mudarCor(botao, cor) {
+
+            const quadro = botao.closest('.quadro');
+
+            quadro.style.backgroundColor = cor;
+        }
+    </script>
+
+</body>
+
+</html>

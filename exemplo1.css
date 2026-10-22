@@ -1,0 +1,172 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 100px;
+
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    min-height: 100vh;
+    width: 100%;
+}
+
+.header {
+    grid-area: header;
+
+    background-color: #f2f2f2;
+
+    padding: 20px;
+
+    font-size: 24px;
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.main {
+    grid-area: main;
+
+    background-color: #e6e6e6;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+.footer {
+    grid-area: footer;
+
+    background-color: #f2f2f2;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.formulario {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    width: 100%;
+    max-width: 600px;
+
+    padding: 20px;
+
+    background-color: white;
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+.titulo {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    width: 100%;
+}
+
+.titulo h2 {
+    margin: 0 0 15px 0;
+}
+
+.linha {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.linha label {
+    min-width: 150px;
+
+    text-align: left;
+}
+
+.linha input[type="text"],
+.linha input[type="email"],
+.linha input[type="password"] {
+    flex: 1;
+
+    padding: 8px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    box-sizing: border-box;
+}
+
+.linha input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.botao {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+.botao button {
+    width: 30%;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #333;
+    color: white;
+
+    cursor: pointer;
+}
+
+.botao button:hover {
+    background-color: #555;
+}

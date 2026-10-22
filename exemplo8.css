@@ -1,0 +1,138 @@
+* { box-sizing: border-box; }
+
+:root {
+  --fundo: #e6e9ec;
+  --card: #ffffff;
+  --texto: #1a2430;
+  --time-a: #d9482b;
+  --time-b: #1769aa;
+  --destaque: #e8a900;
+  --fonte-titulo: "Anton", Impact, sans-serif;
+}
+
+body {
+  font-family: "Barlow", Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "header     header"
+    "scoreboard log"
+    "controls   log";
+}
+
+header {
+  border-bottom: 3px solid var(--texto);
+  padding-bottom: 8px;
+}
+
+header h1 {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+#tempo {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.controls {
+  background: var(--fundo);
+  padding: 16px;
+  border-radius: 12px;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.controls div:nth-child(2) {
+  display: grid;
+  gap: 8px;
+}
+
+.team {
+  border-radius: 12px;
+  border-top-width: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.team.a { border-top-color: var(--time-a); }
+.team.b { border-top-color: var(--time-b); }
+.team.a h3 { color: var(--time-a); }
+.team.b h3 { color: var(--time-b); }
+
+.team h3 {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.score {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(4rem, 12vw, 7rem);
+  line-height: 1;
+  margin: 8px 0;
+}
+
+
+.team.destaque {
+  border-color: var(--destaque);
+  box-shadow: 0 0 0 4px rgba(232, 169, 0, 0.35),
+              0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+button {
+  border: 2px solid var(--texto);
+  background: var(--card);
+  color: var(--texto);
+  border-radius: 8px;
+  font-weight: 600;
+  min-width: 48px;
+  min-height: 48px;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.log {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.log h3 {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.log ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.log li {
+  padding: 8px 0 8px 10px;
+  border-left: 4px solid #ccc;
+  border-bottom: 1px solid #eee;
+  animation: entrar 0.25s ease-out;
+
+}

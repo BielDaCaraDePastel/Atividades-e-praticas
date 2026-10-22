@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 1</title>
+    <link rel="stylesheet" href="exemplo1.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            Cadastro de Usuário
+        </header>
+
+        <main class="main">
+
+            <div class="formulario">
+
+                <form>
+
+                    <div class="titulo">
+                        <h2>Preencha seus dados</h2>
+                    </div>
+
+                    <div class="linha">
+                        <label for="nome">Nome:</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            required>
+                    </div>
+
+                    <div class="linha">
+                        <label for="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required>
+                    </div>
+
+                    <div class="linha">
+                        <label for="senha">Senha:</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            required>
+                    </div>
+
+                    <div class="linha">
+                        <label for="confirmar_senha">
+                            Confirmar Senha:
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmar_senha"
+                            name="confirmar_senha"
+                            required>
+                    </div>
+
+                    <div class="linha">
+                        <input
+                            type="checkbox"
+                            id="aceito"
+                            name="aceito"
+                            required>
+
+                        <label for="aceito">
+                            Aceito os termos
+                        </label>
+                    </div>
+
+                    <div class="botao">
+                        <button type="submit">
+                            Enviar
+                        </button>
+
+                        <button type="reset">
+                            Limpar
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            Rodapé
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

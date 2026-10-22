@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&display=swap">
+  <title>Placar & Cronômetro</title>
+  <link rel="stylesheet" href="exemplo8.css">
+</head>
+<body>
+  <div class="app">
+
+    <header>
+      <h1>Partida.</h1>
+      <h2 id="tempo">00:00</h2>
+    </header>
+
+    <section class="scoreboard">
+      <div class="team a" id="cardA">
+        <h3>Flamengo</h3>
+        <p class="score" id="placarA">0</p>
+      </div>
+      <div class="team b" id="cardB">
+        <h3>Vasco</h3>
+        <p class="score" id="placarB">0</p>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div>
+        <button onclick="mudarPlacar('A', 1)">+1</button>
+        <button onclick="mudarPlacar('A', 2)">+2</button>
+        <button onclick="mudarPlacar('A', -1)">-1</button>
+      </div>
+      <div>
+        <button id="btnIniciar" onclick="alternarCronometro()">Iniciar</button>
+        <button onclick="reiniciar()">Reiniciar</button>
+      </div>
+      <div>
+        <button onclick="mudarPlacar('B', 1)">+1</button>
+        <button onclick="mudarPlacar('B', 2)">+2</button>
+        <button onclick="mudarPlacar('B', -1)">-1</button>
+      </div>
+    </section>
+
+    <aside class="log">
+      <h3>Histórico</h3>
+      <ul id="lista"></ul>
+    </aside>
+
+  </div>
+
+  <script src="exemplo8.js"></script>
+</body>
+</html>
